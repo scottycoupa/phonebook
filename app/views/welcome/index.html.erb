@@ -1,0 +1,36 @@
+<h1>Welcome</h1>
+
+<p>You have one hour to complete as many tasks as you can. You might not finish all of them and that's okay.</p>
+<ul>
+<li>Sort names by First Name</li>
+<li>Add additional people using API from https://randomuser.me/ everytime user clicks button below and person should be added without page refresh</li>
+<li>Add delete icon (using Font Awesome) next to person and clicking it removes person from db</li>
+<li>Update text on page to use Tahoma font</li>
+<li>Make all photos the same size at 200x200 (keeping aspect ratio)</li>
+<li>Clean up page so photo on left and labels and data on the right of the photo</li>
+</ul>
+
+<button>Add Person via API</button>
+<hr/>
+<% @everyone.each do |person| %>
+  <label>
+    Photo
+    <div><img src='<%=person.photo_large %>'/></div>
+  </label>
+  <label>
+    First Name
+    <div><%=person.first %></div>
+  </label>
+  <label>
+    Last Name
+    <div><%=person.last %></div>
+  </label>
+  <label>
+    City
+    <div><%=person.city %></div>
+  </label>
+  <label>
+    Cell Phone
+    <div><%=person.cell %></div>
+  </label>
+<% end %>
